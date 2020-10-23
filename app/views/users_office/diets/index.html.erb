@@ -23,7 +23,7 @@
   <% @diets.each do |diet|%>
   <tbody> 
      <tr>
-      <th> <%= diet.id %> </th>
+      <th> <%= diet.id %> <%= diet.user.email%> </th>
       <th> <%= diet.user.name %> </th>
       <th> <%= diet.meal.description %>  </th>
       <th> <%= diet.date_initial.to_date.strftime("%d/%m/%Y")  %> </th>

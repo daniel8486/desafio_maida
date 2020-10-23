@@ -41,9 +41,10 @@
             <%= form.rich_text_area :description , class: 'form-control' %>
     </div>
 
-    <div class="form-group col-md-5">
+    <div class="form-group col-md-4">
       <%= form.label :usuario %>
       <%= form.select("user_id", @select_user,{ include_blank: 'Selecione ... '}, class: 'form-control' )  %>  
+      <%#= form.text_field :usuario , value: "#{current_user.name}", class: 'form-control' %>
     </div>
 
      <div class="form-group col-md-5">

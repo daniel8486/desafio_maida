@@ -5,7 +5,7 @@ class UsersOffice::DietsController < UsersOfficeController
   before_action :set_select_meal, only:[:new,:edit]
   
   def index 
-    @diets = Diet.all
+   @diets = Diet.all
   end
 
   def show
@@ -41,6 +41,10 @@ class UsersOffice::DietsController < UsersOfficeController
   end
   
   private
+
+  def set_user
+    @user = User.find(current_user.id)
+   end
 
   def set_diet
    @diet = Diet.find(params[:id])
