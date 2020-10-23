@@ -5,7 +5,8 @@ class UsersOffice::DietsController < UsersOfficeController
   before_action :set_select_meal, only:[:new,:edit]
   
   def index 
-   @diets = Diet.all
+   #@diets = Diet.all
+   @diets = Diet.where(params[:user_id])
   end
 
   def show

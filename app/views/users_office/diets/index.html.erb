@@ -20,7 +20,7 @@
       <th> Açoes </th>
      </tr>
   </thead>
-  <% @diets.each do |diet|%>
+  <% @diets.where(:user_id => current_user.id).each.with_index do |diet,index|%>
   <tbody> 
      <tr>
       <th> <%= diet.id %> <%= diet.user.email%> </th>
