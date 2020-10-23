@@ -12,44 +12,43 @@
   <div class="form-row">
     <div class="form-group col-md-6">
          <%= form.label :date_initial %>
-           <%= form.date_field :date_initial, class: 'form-control' %>
+         <%= form.date_field :date_initial, class: 'form-control' %>
     </div>
     <div class="form-group col-md-6">
-      <%= form.label :date_final%>
-           <%= form.date_field :date_final, class: 'form-control'%>
+         <%= form.label :date_final%>
+         <%= form.date_field :date_final, class: 'form-control'%>
     </div>
   </div>
   <div class="form-row">
   <div class="form-group col-md-3">
-     <%= form.label :weight %>
-      <%= form.text_field :weight, class: 'form-control' %>
+         <%= form.label :weight %>
+         <%= form.text_field :weight, class: 'form-control' %>
   </div>
   <div class="form-group col-md-3">
-    <%= form.label :height %>
-  <%= form.text_field :height, class: 'form-control' %>
+         <%= form.label :height %>
+         <%= form.text_field :height, class: 'form-control' %>
   </div>
     <div class="form-group col-md-3">
-      <%= form.label :ideal_weight %>
-            <%= form.text_field :ideal_weight , class: 'form-control'%>
+         <%= form.label :ideal_weight %>
+         <%= form.text_field :ideal_weight , class: 'form-control'%>
     </div>
     <div class="form-group col-md-3">
-    <%= form.label :schedule %>
-    <%= form.text_field :schedule , class: 'form-control'%>
+         <%= form.label :schedule %>
+         <%= form.text_field :schedule , class: 'form-control'%>
     </div>
     <div class="form-group col-md-12">
-             <%= form.label :description %>
-            <%= form.rich_text_area :description , class: 'form-control' %>
-    </div>
-
-    <div class="form-group col-md-4">
-      <%= form.label :usuario %>
-      <%= form.select("user_id", @select_user,{ include_blank: 'Selecione ... '}, class: 'form-control' )  %>  
-      <%#= form.text_field :usuario , value: "#{current_user.name}", class: 'form-control' %>
+         <%= form.label :description %>
+         <%= form.rich_text_area :description , class: 'form-control' %>
     </div>
 
      <div class="form-group col-md-5">
          <%= form.label :refeicao %>
-         <%= form.select("meal_id", @select_meal,{ include_blank: 'Selecione ... '}, class: 'form-control' )  %>
+         <%= form.select("meal_id", @select_meal, { include_blank: 'Selecione ... '}, class: 'form-control' )  %>
+    </div>
+
+       <div class="form-group col-md-4">
+         <%= form.label :usuario %> 
+         <%= form.text_field :user_id, value: current_user.id, class: 'form-control', readonly: true%>
     </div>
 
   </div>

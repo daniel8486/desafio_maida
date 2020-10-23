@@ -17,6 +17,8 @@ class UsersOffice::DietsController < UsersOfficeController
   end
 
   def create
+   @select_user == current_user.name
+    
    @diet = Diet.new(params_diet)
    if @diet.save
    redirect_to users_office_diets_index_path, notice: 'Dieta ... criada com sucesso !'
@@ -52,7 +54,7 @@ class UsersOffice::DietsController < UsersOfficeController
   end
 
   def set_select_user
-   @select_user = User.all.pluck(:name,:id)
+   @select_user = User.where(params[:user_id])
   end
 
   def set_select_meal
