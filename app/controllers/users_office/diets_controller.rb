@@ -6,7 +6,7 @@ class UsersOffice::DietsController < UsersOfficeController
   
   def index 
    #@diets = Diet.all
-   @diets = Diet.where(params[:user_id])
+   @diets = Diet.where(params[:user_id]).page(params[:page]).per(6)
   end
 
   def show

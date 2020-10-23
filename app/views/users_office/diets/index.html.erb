@@ -1,7 +1,7 @@
 <h1>Listagem de Dietas </h1>
 
 <hr>
-<%= link_to 'Novo', new_users_office_diet_path %> | <%= notice %>  | 
+<%= link_to 'Novo', new_users_office_diet_path , class: 'btn btn-success'%> | <%= notice %>  | 
 <hr>
 
 <table class='table-hover'>
@@ -23,7 +23,7 @@
   <% @diets.where(:user_id => current_user.id).each.with_index do |diet,index|%>
   <tbody> 
      <tr>
-      <th> <%= diet.id %> <%= diet.user.email%> </th>
+      <th> <%= diet.id %></th>
       <th> <%= diet.user.name %> </th>
       <th> <%= diet.meal.description %>  </th>
       <th> <%= diet.date_initial.to_date.strftime("%d/%m/%Y")  %> </th>
@@ -43,6 +43,10 @@
   </tbody> 
      
   <% end %>
-
+   
+ 
 
 </table>
+
+<hr>
+ <div class="text-center"> <%= paginate @diets %> </div>

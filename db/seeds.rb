@@ -44,6 +44,18 @@ users = User.create(
       email: 'danielmatos404@gmail.com',
       password: '123456',
       password_confirmation: '123456',
+    },
+    {
+      name: 'Usuário Teste',
+      email: 'usuario@teste.com.br',
+      password: '123456',
+      password_confirmation: '123456',
+    },
+    {
+      name: 'Usuário Padrao',
+      email: 'usuario@padrao.com.br',
+      password: '123456',
+      password_confirmation: '123456',
     }
   ]
 )
