@@ -1,0 +1,2 @@
+module UsersOffice::GraphicsHelper
+end

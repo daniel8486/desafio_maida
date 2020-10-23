@@ -1,0 +1,34 @@
+<hr>
+<h1>Mostrando Usuário</h1>
+<hr>
+
+<table>
+  <thead> 
+     <tr>
+      <th> # </th>
+      <th> Foto </th>
+      <th> Nome </th>
+      <th> Email </th>
+      <th> Criado em : </th>
+      <th> Atualizado em : </th>
+      <th> Açoes </th>
+     </tr>
+  </thead>
+  
+  <tbody> 
+     <tr>
+      <th> <%= @user.id %> </th>
+      <th><%= image_tag(@user.picture, size: '100x100') if @user.picture.attached? %></th>
+      <th> <%= @user.name %>  </th>
+      <th> <%= @user.email %>  </th>
+      <th> <%= @user.created_at %> </th>
+      <th> <%= @user.updated_at %>  </th>
+      <th> 
+        <%= link_to 'Voltar', users_office_users_path%> | 
+        <%= link_to 'Editar',  edit_users_office_user_path(@user)%> | 
+        <%= link_to 'Deletar', users_office_user_path(@user), method: :delete, data:{ confirm: 'Tem Certeza'}%> | 
+      </th>
+     </tr>
+  </tbody>
+  
+</table>

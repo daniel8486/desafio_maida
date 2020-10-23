@@ -1,0 +1,48 @@
+<h1>Listagem de Dietas </h1>
+
+<hr>
+<%= link_to 'Novo', new_users_office_diet_path %> | <%= notice %>  | 
+<hr>
+
+<table class='table-hover'>
+  <thead> 
+     <tr>
+      <th> # </th>
+      <th> Nome </th>
+      <th> Refeição </th>
+      <th> Data Inicial </th>
+      <th> Data Fim </th>
+      <th> Peso </th>
+      <th> Altura </th>
+      <th> Peso Ideal</th>
+      <th> Schedule </th>
+      <th> Description </th>
+      <th> Açoes </th>
+     </tr>
+  </thead>
+  <% @diets.each do |diet|%>
+  <tbody> 
+     <tr>
+      <th> <%= diet.id %> </th>
+      <th> <%= diet.user.name %> </th>
+      <th> <%= diet.meal.description %>  </th>
+      <th> <%= diet.date_initial.to_date.strftime("%d/%m/%Y")  %> </th>
+      <th> <%= diet.date_final.to_date.strftime("%d/%m/%Y")  %>  </th>
+      <th> <%= diet.weight %>  </th>
+      <th> <%= diet.height %>  </th>
+      <th> <%= diet.ideal_weight %> </th>
+      <th> <%= diet.schedule.to_time.strftime("%I:%M%p") %>  </th>
+      <th> <%= diet.description %>  </th>
+      <th>
+        <%= link_to 'Voltar', users_office_welcome_index_path %> |  
+        <%= link_to 'Mostrar', users_office_diet_path(diet) %> | 
+        <%= link_to 'Editar',  edit_users_office_diet_path(diet)%> | 
+        <%= link_to 'Deletar', users_office_diet_path(diet), method: :delete, data:{ confirm: 'Tem Certeza'}%> | 
+      </th>
+     </tr>
+  </tbody> 
+     
+  <% end %>
+
+
+</table>

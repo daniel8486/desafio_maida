@@ -1,0 +1,42 @@
+<hr>
+ <h1>Mostrando Dieta</h1>
+<hr>
+
+<table>
+  <thead> 
+     <tr>
+      <th> # </th>
+      <th> Nome </th>
+      <th> Refeição </th>
+      <th> Data Inicial </th>
+      <th> Data Fim </th>
+      <th> Peso </th>
+      <th> Altura </th>
+      <th> Peso Ideal</th>
+      <th> Schedule </th>
+      <th> Description </th>
+      <th> Açoes </th>
+     </tr>
+  </thead>
+  
+  <tbody> 
+     <tr>
+      <th> <%= @diet.id %> </th>
+      <th> <%= @diet.user.name %>  </th>
+      <th> <%= @diet.meal.description %>  </th>
+      <th> <%= @diet.date_initial.to_date.strftime("%d/%m/%Y") %> </th>
+      <th> <%= @diet.date_final.to_date.strftime("%d/%m/%Y") %>  </th>
+      <th> <%= @diet.weight %>  </th>
+      <th> <%= @diet.height %>  </th>
+      <th> <%= @diet.ideal_weight %> </th>
+      <th> <%= @diet.schedule %>  </th>
+      <th> <%= @diet.description %>  </th>
+      <th> 
+        <%= link_to 'Voltar',  users_office_diets_path %> | 
+        <%= link_to 'Editar',  edit_users_office_diet_path(@diet)%> | 
+        <%= link_to 'Deletar', users_office_diet_path(@diet), method: :delete, data:{ confirm: 'Tem Certeza'}%> | 
+      </th>
+     </tr>
+  </tbody>
+  
+</table>

@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_initial: 2020-10-22
+  date_final: 2020-10-22
+  weight: 1.5
+  height: 1.5
+  ideal_weight: 1.5
+  schedule: 2020-10-22 14:19:47
+  description: MyText
+  user: one
+  meal: one
+
+two:
+  date_initial: 2020-10-22
+  date_final: 2020-10-22
+  weight: 1.5
+  height: 1.5
+  ideal_weight: 1.5
+  schedule: 2020-10-22 14:19:47
+  description: MyText
+  user: two
+  meal: two
